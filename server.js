@@ -3,12 +3,12 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(_dirname + '/dist/teste-wlady'));
+app.use(express.static(__dirname + '/dist/teste-wlady'));
 
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/dist/teste-wlady/index.html');
 });
 
 app.listen(PORT, () => {
-    console.log('servidoriniciado na porta' + PORT);
+    console.log('servidor iniciado na porta ' + PORT);
 })
